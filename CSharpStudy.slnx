@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="Calculator/Calculator.csproj" Id="d7998332-ffe4-4963-b93a-4bd6901c8f5b" />
   <Project Path="ch1/ch1.csproj" />
   <Project Path="ch5/ch5.csproj" Id="6481ea3b-c2b7-4312-ac1a-c4e56133d770" />
   <Project Path="CSharpStudy/CSharpStudy.csproj" />
