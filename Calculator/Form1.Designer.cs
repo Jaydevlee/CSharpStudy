@@ -31,12 +31,12 @@
             this.display = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnDivide = new System.Windows.Forms.Button();
-            this.btnDot = new System.Windows.Forms.Button();
+            this.btnPoint = new System.Windows.Forms.Button();
             this.btnZero = new System.Windows.Forms.Button();
-            this.btnAC = new System.Windows.Forms.Button();
-            this.btnMul = new System.Windows.Forms.Button();
-            this.btnMinus = new System.Windows.Forms.Button();
-            this.btnPlus = new System.Windows.Forms.Button();
+            this.btnAllClear = new System.Windows.Forms.Button();
+            this.btnMultiply = new System.Windows.Forms.Button();
+            this.btnSubstract = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.btnNine = new System.Windows.Forms.Button();
             this.btnEight = new System.Windows.Forms.Button();
             this.btnSeven = new System.Windows.Forms.Button();
@@ -69,12 +69,12 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.Controls.Add(this.btnDivide, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnDot, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnPoint, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnZero, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnAC, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnMul, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnMinus, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnPlus, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnAllClear, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnMultiply, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnSubstract, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnAdd, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnNine, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnEight, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnSeven, 0, 0);
@@ -103,16 +103,18 @@
             this.btnDivide.TabIndex = 17;
             this.btnDivide.Text = "÷";
             this.btnDivide.UseVisualStyleBackColor = true;
+            this.btnDivide.Click += new System.EventHandler(this.btnDivide_Click);
             // 
-            // btnDot
+            // btnPoint
             // 
-            this.btnDot.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnDot.Location = new System.Drawing.Point(235, 300);
-            this.btnDot.Name = "btnDot";
-            this.btnDot.Size = new System.Drawing.Size(110, 93);
-            this.btnDot.TabIndex = 16;
-            this.btnDot.Text = ".";
-            this.btnDot.UseVisualStyleBackColor = true;
+            this.btnPoint.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnPoint.Location = new System.Drawing.Point(235, 300);
+            this.btnPoint.Name = "btnPoint";
+            this.btnPoint.Size = new System.Drawing.Size(110, 93);
+            this.btnPoint.TabIndex = 16;
+            this.btnPoint.Text = ".";
+            this.btnPoint.UseVisualStyleBackColor = true;
+            this.btnPoint.Click += new System.EventHandler(this.btnPoint_Click);
             // 
             // btnZero
             // 
@@ -123,46 +125,51 @@
             this.btnZero.TabIndex = 15;
             this.btnZero.Text = "0";
             this.btnZero.UseVisualStyleBackColor = true;
+            this.btnZero.Click += new System.EventHandler(this.btnZero_Click);
             // 
-            // btnAC
+            // btnAllClear
             // 
-            this.btnAC.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnAC.Location = new System.Drawing.Point(3, 300);
-            this.btnAC.Name = "btnAC";
-            this.btnAC.Size = new System.Drawing.Size(110, 93);
-            this.btnAC.TabIndex = 14;
-            this.btnAC.Text = "AC";
-            this.btnAC.UseVisualStyleBackColor = true;
+            this.btnAllClear.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnAllClear.Location = new System.Drawing.Point(3, 300);
+            this.btnAllClear.Name = "btnAllClear";
+            this.btnAllClear.Size = new System.Drawing.Size(110, 93);
+            this.btnAllClear.TabIndex = 14;
+            this.btnAllClear.Text = "AC";
+            this.btnAllClear.UseVisualStyleBackColor = true;
+            this.btnAllClear.Click += new System.EventHandler(this.btnAllClear_Click);
             // 
-            // btnMul
+            // btnMultiply
             // 
-            this.btnMul.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnMul.Location = new System.Drawing.Point(351, 201);
-            this.btnMul.Name = "btnMul";
-            this.btnMul.Size = new System.Drawing.Size(110, 93);
-            this.btnMul.TabIndex = 13;
-            this.btnMul.Text = "*";
-            this.btnMul.UseVisualStyleBackColor = true;
+            this.btnMultiply.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMultiply.Location = new System.Drawing.Point(351, 201);
+            this.btnMultiply.Name = "btnMultiply";
+            this.btnMultiply.Size = new System.Drawing.Size(110, 93);
+            this.btnMultiply.TabIndex = 13;
+            this.btnMultiply.Text = "*";
+            this.btnMultiply.UseVisualStyleBackColor = true;
+            this.btnMultiply.Click += new System.EventHandler(this.btnMultiply_Click);
             // 
-            // btnMinus
+            // btnSubstract
             // 
-            this.btnMinus.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnMinus.Location = new System.Drawing.Point(351, 102);
-            this.btnMinus.Name = "btnMinus";
-            this.btnMinus.Size = new System.Drawing.Size(110, 93);
-            this.btnMinus.TabIndex = 12;
-            this.btnMinus.Text = "-";
-            this.btnMinus.UseVisualStyleBackColor = true;
+            this.btnSubstract.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSubstract.Location = new System.Drawing.Point(351, 102);
+            this.btnSubstract.Name = "btnSubstract";
+            this.btnSubstract.Size = new System.Drawing.Size(110, 93);
+            this.btnSubstract.TabIndex = 12;
+            this.btnSubstract.Text = "-";
+            this.btnSubstract.UseVisualStyleBackColor = true;
+            this.btnSubstract.Click += new System.EventHandler(this.btnSubstract_Click);
             // 
-            // btnPlus
+            // btnAdd
             // 
-            this.btnPlus.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnPlus.Location = new System.Drawing.Point(351, 3);
-            this.btnPlus.Name = "btnPlus";
-            this.btnPlus.Size = new System.Drawing.Size(110, 93);
-            this.btnPlus.TabIndex = 11;
-            this.btnPlus.Text = "+";
-            this.btnPlus.UseVisualStyleBackColor = true;
+            this.btnAdd.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnAdd.Location = new System.Drawing.Point(351, 3);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(110, 93);
+            this.btnAdd.TabIndex = 11;
+            this.btnAdd.Text = "+";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnNine
             // 
@@ -173,6 +180,7 @@
             this.btnNine.TabIndex = 10;
             this.btnNine.Text = "9";
             this.btnNine.UseVisualStyleBackColor = true;
+            this.btnNine.Click += new System.EventHandler(this.btnNine_Click);
             // 
             // btnEight
             // 
@@ -183,6 +191,7 @@
             this.btnEight.TabIndex = 9;
             this.btnEight.Text = "8";
             this.btnEight.UseVisualStyleBackColor = true;
+            this.btnEight.Click += new System.EventHandler(this.btnEight_Click);
             // 
             // btnSeven
             // 
@@ -193,6 +202,7 @@
             this.btnSeven.TabIndex = 8;
             this.btnSeven.Text = "7";
             this.btnSeven.UseVisualStyleBackColor = true;
+            this.btnSeven.Click += new System.EventHandler(this.btnSeven_Click);
             // 
             // btnOne
             // 
@@ -203,6 +213,7 @@
             this.btnOne.TabIndex = 2;
             this.btnOne.Text = "1";
             this.btnOne.UseVisualStyleBackColor = true;
+            this.btnOne.Click += new System.EventHandler(this.btnOne_Click);
             // 
             // btnTwo
             // 
@@ -213,6 +224,7 @@
             this.btnTwo.TabIndex = 3;
             this.btnTwo.Text = "2";
             this.btnTwo.UseVisualStyleBackColor = true;
+            this.btnTwo.Click += new System.EventHandler(this.btnTwo_Click);
             // 
             // btnThree
             // 
@@ -223,6 +235,7 @@
             this.btnThree.TabIndex = 4;
             this.btnThree.Text = "3";
             this.btnThree.UseVisualStyleBackColor = true;
+            this.btnThree.Click += new System.EventHandler(this.btnThree_Click);
             // 
             // btnFour
             // 
@@ -233,6 +246,7 @@
             this.btnFour.TabIndex = 5;
             this.btnFour.Text = "4";
             this.btnFour.UseVisualStyleBackColor = true;
+            this.btnFour.Click += new System.EventHandler(this.btnFour_Click);
             // 
             // btnSix
             // 
@@ -243,6 +257,7 @@
             this.btnSix.TabIndex = 7;
             this.btnSix.Text = "6";
             this.btnSix.UseVisualStyleBackColor = true;
+            this.btnSix.Click += new System.EventHandler(this.btnSix_Click);
             // 
             // btnFive
             // 
@@ -253,6 +268,7 @@
             this.btnFive.TabIndex = 6;
             this.btnFive.Text = "5";
             this.btnFive.UseVisualStyleBackColor = true;
+            this.btnFive.Click += new System.EventHandler(this.btnFive_Click);
             // 
             // btnResult
             // 
@@ -263,6 +279,7 @@
             this.btnResult.TabIndex = 0;
             this.btnResult.Text = "=";
             this.btnResult.UseVisualStyleBackColor = true;
+            this.btnResult.Click += new System.EventHandler(this.btnResult_Click);
             // 
             // Form1
             // 
@@ -286,12 +303,12 @@
         private System.Windows.Forms.Button btnResult;
         private System.Windows.Forms.Button btnOne;
         private System.Windows.Forms.Button btnDivide;
-        private System.Windows.Forms.Button btnDot;
+        private System.Windows.Forms.Button btnPoint;
         private System.Windows.Forms.Button btnZero;
-        private System.Windows.Forms.Button btnAC;
-        private System.Windows.Forms.Button btnMul;
-        private System.Windows.Forms.Button btnMinus;
-        private System.Windows.Forms.Button btnPlus;
+        private System.Windows.Forms.Button btnAllClear;
+        private System.Windows.Forms.Button btnMultiply;
+        private System.Windows.Forms.Button btnSubstract;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnNine;
         private System.Windows.Forms.Button btnEight;
         private System.Windows.Forms.Button btnSeven;
