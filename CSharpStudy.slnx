@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="ch1/ch1.csproj" />
+  <Project Path="ch5/ch5.csproj" Id="6481ea3b-c2b7-4312-ac1a-c4e56133d770" />
+  <Project Path="CSharpStudy/CSharpStudy.csproj" />
+  <Project Path="FindNumber/FindNumber.csproj" Id="87c3fafa-753c-4cb0-b614-b8a29178fa44" />
+  <Project Path="WindowsFormsApp1/WindowsFormsApp1.csproj" Id="4c7f1014-62b0-45a1-ac7f-b1c93440651c" />
+  <Project Path="WindowsSignIn/WindowsSignIn.csproj" Id="32c24bed-da4a-4511-a921-20b4327be419" />
+</Solution>
